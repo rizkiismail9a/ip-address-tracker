@@ -14,7 +14,7 @@
 
 <script setup>
 import MapView from "~/components/MapView.vue";
-const imgSrc = ref("");
+const imgSrc = ref("/images/pattern-bg-desktop.png");
 let windowWidth = ref(process.client ? window.innerWidth : "");
 import { useLocationStore } from "../stores/location";
 const locationStore = useLocationStore();
@@ -32,8 +32,6 @@ watch(
       imgSrc.value = "/images/pattern-bg-desktop.png";
     }
   },
-  {
-    immediate: true,
-  }
+  { immediate: true }
 );
 </script>
