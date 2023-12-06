@@ -31,7 +31,6 @@ watch(
     } else {
       imgSrc.value = "/images/pattern-bg-desktop.png";
     }
-  },
-  { immediate: true }
+  }
 );
 </script>
