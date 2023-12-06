@@ -10,16 +10,16 @@ export const useLocationStore = defineStore("location", {
   },
   actions: {
     async setIPData() {
+      const runTimeConfig = useRuntimeConfig();
       this.isLoading = true;
-      const result = await axios.get(`/api/geoipify/getMyIP`);
+      const result = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${runTimeConfig.public.GEOIPIFY_KEY}`);
       this.ipData = result.data;
       this.isLoading = false;
     },
     async findIPLocation({ ipAddress }) {
+      const runTimeConfig = useRuntimeConfig();
       this.isLoading = true;
-      const result = await axios.post(`/api/geoipify/getIpLocation`, {
-        ipAddress,
-      });
+      const result = await axios.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${runTimeConfig.public.GEOIPIFY_KEY}&ipAddress=${ipAddress}`);
       this.ipData = result.data;
       this.isLoading = false;
     },
