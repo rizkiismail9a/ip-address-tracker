@@ -18,7 +18,7 @@
     <div class="relative">
       <div class="md:after:content-[''] md:after:bg-dark-gray md:after:absolute md:after:bottom-0 md:after:left-0 md:after:top-[12px] md:after:h-[50px] md:after:w-[0.8px] px-[18px] flex flex-col md:items-start items-center md:gap-2">
         <p class="text-dark-gray text-[12px] font-bold">TIMEZONE</p>
-        <h2 class="font-medium text-[1rem] text-very-dark-gray">UTC {{ ipData?.location.timezone }}</h2>
+        <h2 class="font-medium text-[1rem] text-very-dark-gray">UTC {{ ipData?.location?.timezone }}</h2>
       </div>
     </div>
     <!-- ISP -->
