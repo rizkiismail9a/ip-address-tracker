@@ -1,5 +1,5 @@
 <template>
-  <div class="md:h-[500px] h-[800px] w-full">
+  <div class="md:h-[500px] h-[800px] w-full overflow-y-scroll">
     <LMap ref="map" :zoom="zoom" :center="[latitude, longitude]">
       <LTileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&amp;copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors' layer-type="base" name="OpenStreetMap" />
       <LMarker :lat-lng="[latitude, longitude]">

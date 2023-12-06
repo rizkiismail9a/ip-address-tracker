@@ -1,6 +1,6 @@
 <template>
   <div id="MainLayout" class="fixed w-full h-screen">
-    <div class="headerImage flex">
+    <div class="headerImage">
       <img :src="imgSrc" class="object-cover w-full" alt="" />
     </div>
 
@@ -14,11 +14,11 @@
 
 <script setup>
 import MapView from "~/components/MapView.vue";
-const imgSrc = ref("/images/pattern-bg-desktop.png");
+const imgSrc = ref("");
 let windowWidth = ref(process.client ? window.innerWidth : "");
 import { useLocationStore } from "../stores/location";
 const locationStore = useLocationStore();
-onMounted(() => {
+onBeforeMount(() => {
   window.addEventListener("resize", () => {
     windowWidth.value = window.innerWidth;
   });
@@ -31,6 +31,9 @@ watch(
     } else {
       imgSrc.value = "/images/pattern-bg-desktop.png";
     }
+  },
+  {
+    immediate: true,
   }
 );
 </script>

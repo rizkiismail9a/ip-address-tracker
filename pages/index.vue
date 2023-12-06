@@ -1,7 +1,7 @@
 <template>
   <MainLayout>
-    <div class="absolute flex items-start justify-center top-0 w-full z-10 h-fit md:p-0 p-5">
-      <div id="PageHeader" class="my-[30px] text-xl max-w-[1200px] w-full text-center flex flex-col gap-9 items-center">
+    <div class="absolute flex items-start justify-center top-0 w-full z-10 h-fit md:p-0 px-5">
+      <div id="PageHeader" class="md:my-[30px] my-5 text-xl max-w-[1200px] w-full text-center flex flex-col gap-9 items-center">
         <!-- page title -->
         <h1 id="Title" class="text-white font-medium m-0">IP Address Tracker</h1>
         <!-- form IP input -->
