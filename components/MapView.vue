@@ -13,7 +13,7 @@
 import { ref } from "vue";
 import { useLocationStore } from "~/stores/location";
 const locationStore = useLocationStore();
-const zoom = ref(3);
+const zoom = ref(13);
 const latitude = computed(() => {
   return locationStore.ipData.location.lat;
 });
