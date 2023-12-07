@@ -31,6 +31,7 @@ useSeoMeta({
   description: "Easy and Free. Find any IP Address' exact location.",
   ogDescription: "Easy and Free. Find any IP Address' exact location.",
 });
+
 // search the ip address location
 async function searchIpLocation() {
   try {

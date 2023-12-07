@@ -32,7 +32,6 @@
 </template>
 
 <script setup>
-// const props = defineProps(["ip", "location", "isp"]);
 const locationStore = useLocationStore();
 const ipData = computed(() => {
   return locationStore.ipData;
