@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         "very-dark-gray": "#2b2b2b",
-        "dark-gray": " 	#969696",
+        "dark-gray": "#969696",
       },
     },
     fontFamily: {
